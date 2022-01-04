@@ -96,6 +96,7 @@ export const TransactionProvider = ({ children }) => {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
 
       setCurrentAcount(accounts[0])
+      window.location.reload()
     } catch (error) {
       console.log(error)
       throw new Error('No ethereum object.')
